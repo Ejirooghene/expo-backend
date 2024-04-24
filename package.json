@@ -5,9 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon server.ts",
-    "build": "rimraf ./dist && tsc -p .",
-    "start-prod": "node dist/server.js",
-    "start": "yarn run build && yarn start-prod"
+    "build": "tsc",
+    "start": "node dist/server.js"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
