@@ -4,9 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node dist/server.js",
-    "build": "tsc",
-    "dev": "nodemon server.ts"
+    "dev": "nodemon server.ts",
+    "build": "rimraf ./dist && tsc -p .",
+    "start-prod": "node dist/server.js",
+    "start": "yarn run build && yarn start-prod"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
